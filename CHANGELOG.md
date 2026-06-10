@@ -58,7 +58,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   - `.editorconfig` — Cross-editor formatting consistency
 
 - **Governance & Guidelines**
-  - `LICENSE` — MIT license with research artifact notice
+  - `LICENSE` 
   - `CONTRIBUTING.md` — Contributor guidelines, contribution workflow, testing requirements
   - `README.md` — Comprehensive project overview, quick start, architecture reference
   - `.github/pull_request_template.md` — PR guidelines and checklist
