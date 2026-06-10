@@ -1,0 +1,32 @@
+# AIS² Code Ownership and Review Requirements
+
+# Core system (immutable reference)
+phase_c/ @Dedoc-9
+validator/ @Dedoc-9
+FREEZE.md @Dedoc-9
+INVARIANTS.md @Dedoc-9
+
+# Implementation and tooling
+examples/ @Dedoc-9
+trace_exporter.py @Dedoc-9
+dashboard/ @Dedoc-9
+docker/ @Dedoc-9
+
+# Documentation and specifications
+*.md @Dedoc-9
+paper/ @Dedoc-9
+spec/ @Dedoc-9
+
+# Configuration
+pyproject.toml @Dedoc-9
+setup.py @Dedoc-9
+requirements.txt @Dedoc-9
+Dockerfile @Dedoc-9
+Makefile @Dedoc-9
+
+# GitHub configuration
+.github/ @Dedoc-9
+LICENSE @Dedoc-9
+
+# Tests
+tests/ @Dedoc-9

@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AIS2"
+version = "1.0.0"
+description = "Adversarially Isolated Stateless² Rendering Architecture - Deterministic execution trace framework with type-enforced isolation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Research Prototype"}
+authors = [
+    {name = "Anonymous", email = "research@osdi.org"}
+]
+keywords = ["rendering", "tracing", "determinism", "isolation", "state-safety"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "streamlit>=1.28.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "mypy>=1.5.0",
+    "ruff>=0.1.0",
+]
+docker = [
+    "docker>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Dedoc-9/AIS2"
+Documentation = "https://github.com/Dedoc-9/AIS2#readme"
+Repository = "https://github.com/Dedoc-9/AIS2.git"
+"Bug Tracker" = "https://github.com/Dedoc-9/AIS2/issues"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["phase_c", "validator", "dashboard", "trace_exporter"]
+
+[tool.setuptools.package-data]
+phase_c = ["*.py"]
+validator = ["*.py"]
+dashboard = ["*.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=. --cov-report=html"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "W"]
+ignore = []
