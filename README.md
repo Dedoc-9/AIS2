@@ -174,7 +174,7 @@ AIS2/
 ├── pyproject.toml                    # Modern Python packaging
 ├── setup.py                          # Fallback installation
 ├── requirements.txt                  # Dependency list
-├── LICENSE                           # MIT with research notice
+├── LICENSE                           
 ├── README.md                         # This file
 ├── CONTRIBUTING.md                   # Developer guidelines
 ├── CHANGELOG.md                      # Version history
