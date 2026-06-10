@@ -4,6 +4,9 @@ A deterministic execution trace framework for isolating and rendering non-repres
 
 **Status**: Phase C Complete (Architecture Frozen) | Day 1 Implementation Complete | OSDI Submission Ready
 
+**Author:** Daniel J. Dillberg
+**Contact:** bigdilly95@gmail.com
+
 ---
 
 ## Overview
