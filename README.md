@@ -10,6 +10,8 @@ A deterministic execution trace framework for isolating and rendering non-repres
 
 AIS² is a type-enforced, immutable trace framework that separates system state into representable (Z) and non-representable (Ω) domains. The system enforces deterministic event semantics, type-safe state isolation, and pure observational rendering.
 
+Users who instrument their systems with AIS² gain deterministic, auditable execution traces with formal guarantees: type-safe isolation prevents semantic leakage of non-representable state (Ω), immutability ensures traces cannot be mutated post-execution, and pure-function rendering enables reproducible analysis and formal verification without system coupling. This enables OSDI-grade validation of system behavior, adversarial completeness proofs, and cryptographically-auditable execution records suitable for compliance, research, and debugging.
+
 **Key Properties:**
 - **Deterministic**: Same inputs always produce byte-identical traces (trace-semantic determinism)
 - **Type-Safe**: Ω-domain isolation enforced at the type level; no semantic leakage
