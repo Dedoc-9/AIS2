@@ -16,6 +16,15 @@ AIS² is a type-enforced, immutable trace framework that separates system state 
 
 Users who instrument their systems with AIS² gain deterministic, auditable execution traces with formal guarantees: type-safe isolation prevents semantic leakage of non-representable state (Ω), immutability ensures traces cannot be mutated post-execution, and pure-function rendering enables reproducible analysis and formal verification without system coupling. This enables OSDI-grade validation of system behavior, adversarial completeness proofs, and cryptographically-auditable execution records suitable for compliance, research, and debugging.
 
+phase_c/ and validator/ (not on this Git now) are formal reference documents masquerading as code.
+They're referenced in the spec as "frozen core" but:
+
+Nothing in the working system imports them
+They're descriptive (what the system should have) not prescriptive (what it uses)
+The actual system runs on trace_exporter + examples + dashboard
+
+So: You have a working trace-to-visualization pipeline, not a "specification with stub code."
+
 **Key Properties:**
 - **Deterministic**: Same inputs always produce byte-identical traces (trace-semantic determinism)
 - **Type-Safe**: Ω-domain isolation enforced at the type level; no semantic leakage
